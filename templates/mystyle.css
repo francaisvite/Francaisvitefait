@@ -1,0 +1,25 @@
+.w3-tangerine {
+    font-family: "Tangerine", cursive, sans-serif;
+    margin: 0px 0 0 0;
+    text-align: center;
+}
+
+.center {
+    width: 90%;
+    margin: auto
+    
+}
+
+
+.firstbot:link, firstbot:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.firstbot:hover, a:active {
+    background-color: red;
+}

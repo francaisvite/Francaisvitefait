@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title%}Saved {% endblock %} 
+
+{% block content%}
+<div class="w3-container w3-lime">
+  <h2 style="text-align:center">Document reception status</h2>
+</div>
+<br>
+ <div class="contenu_corps" style="margin: 20px 20px 0px 20px">
+ 
+ 
+ 
+      {% if save %}
+      	
+      	
+      	 {% if stud %}
+          <div class="w3-center">
+ 			Your document has been uploaded and we will review it as soon as the payment has been made. The uploaded document is a for academic reasons.
+ 			
+ 			<p> The total number of words in the document is : <b style="color:green">   {{counted}}  </b>    </p>
+ 			
+ 			<p> the amount that you will pay is $ {{totals}}</p>
+ 			 
+ 			 <div class="w3-panel w3-leftbar w3-border-green w3-pale-green"  style="text-align:center"> please pay now to have your document reviewed</div>
+ 			
+  
+  					<br>
+  					
+
+			<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+				<input type="hidden" name="cmd" value="_xclick">
+				<input type="hidden" name="business" value="francaisvitefaite@gmail.com">
+				<input type="hidden" name="item_name" value="Proofreading">
+				<input type="hidden" name="currency_code" value="CAD">
+				<input type="hidden" name="amount" value={{totals}}>
+				<input type="hidden" name="custom" value="paid">
+				<input id="id_cancel_return" name="cancel_return" type="hidden" value="{% url 'failed' %}">
+				<input id="id_return_url" name="return" type="hidden" value="http://www.example.com/thank-you">	
+				<input type="submit" class="w3-btn w3-white w3-border w3-border-red w3-round-large" value ="Pay with Paypal" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+			</form>
+					
+			
+ 	</div>	
+      {% endif %}
+      
+       {% if not stud %}
+       
+            <div class="w3-center">
+ 			Your document has been uploaded and we will review it as soon as the payment has been made. Professional.
+ 			
+ 			<p> The total number of words in the document is : <b style="color:green">   {{counted}}  </b>    </p>
+ 			
+ 			<p> the amount that you will pay is $ {{totals}}</p>
+ 			 
+ 			 <div class="w3-panel w3-leftbar w3-border-green w3-pale-green"  style="text-align:center"> please pay now to have your document reviewed</div>
+ 			
+  
+  					<br>
+  					
+
+			<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+				<input type="hidden" name="cmd" value="_xclick">
+				<input type="hidden" name="business" value="francaisvitefaite@gmail.com">
+				<input type="hidden" name="item_name" value="Proofreading">
+				<input type="hidden" name="currency_code" value="CAD">
+				<input type="hidden" name="amount" value={{totals}}>
+				<input id="id_cancel_return" name="cancel_return" type="hidden" value="http://www.example.com/order/21/">
+				<input id="id_return_url" name="return" type="hidden" value="http://www.example.com/thank-you">		
+				<input type="submit" class="w3-btn w3-white w3-border w3-border-red w3-round-large" value ="Pay with Paypal" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+			</form>
+					
+			
+ 	</div>	
+        {% endif %}
+     
+     {% endif %}
+     
+      
+      {% if not save %}
+      
+     <div class="w3-center">
+     <h3>    <p class="w3-panel w3-topbar w3-bottombar w3-border-red w3-pale-red">Your document was not received. Please make sure that all the fields were completed</p> </h3>
+      <div class="w3-panel w3-leftbar w3-border-red w3-pale-green"" style="text-align:center">
+  			<p> Also, only word documents with extension ".docx" can be uploaded for now</p>
+		</div> 
+     
+          <h3>    <p class="w3-panel w3-topbar w3-bottombar w3-border-red w3-pale-red"> Votre document n'a pas été reçu. Veuiller bien remplir le formulaire.</p> </h3>
+      <div class="w3-panel w3-leftbar w3-border-red w3-pale-green"" style="text-align:center">
+  			<p> Aussi, seuls les documents word avec l'extension ".docx" peuvent être téléversé/ téléchargés.</p>
+		</div> 
+     
+     
+      
+      
+         <form action="{% url "soumettre" %}">
+    			<input type="submit" class="w3-btn w3-border w3-border-orange w3-white w3-round-large w3-center" value="Go back to submit document" />
+		</form>
+     
+      </div> 
+       {% endif %}
+      
+</div>
+{% endblock%}
+
+
+{%block cote%}
+  
+  <div class="w3-container w3-red">
+  <h2 style="text-align:center">Mot du jour</h2>
+  </div>
+  
+  <br>
+  
+  <div class="contenu_corps" style="margin: 20px 20px 0px 20px">
+	
+
+  </div>
+  
+  
+
+{% endblock%}
+
+
+{% block faq%}
+
+
+{% endblock %}
+
+
+{% block second%}
+
+
+{% endblock%}
+
+
+
+{% block do%}
+
+
+
+{% endblock%}
+
+
+{% block prix%}
+
+{% endblock %}

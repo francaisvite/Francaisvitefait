@@ -1,0 +1,242 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title%} FVF home {% endblock %} 
+
+<style>
+.firstbot:link, firstbot:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.firstbot:hover, a:active {
+    background-color: red;
+}
+</style>
+
+{% block content%}
+<div class="w3-container w3-orange">
+  <h2 style="text-align:center">Accueil/ Greeting </h2>
+</div>
+<br>
+ <div class="contenu_corps w3-large" style="margin: 20px 20px 0px 20px; font-size:18px;  font-family: 'Helvetica', Times, serif;  margin-right:40px;">
+
+Bienvenue sur <b><i class="w3-text-red">FVF Traduction, relecture, et relecture </i></b> !! Nous vous attendions. C’est pour combler le manque d’éditeur francophone 
+et Anglophone en Atlantique Canada que nous avons décidé de créer cette plateforme. Nous rééditons et anglais
+et en français. Ainsi, que vous soyez étudiant, ou travailleur, nous nous engageons a relire votre document 
+dans un délais de 24h (Veuillez lire la durée de traitement des documents dans la section About Us).
+Si vous avez besoin d’un service que nous n’avons pas mentionner sur notre site web, veuillez s’il vous plait 
+nous contacter par email à l’adresse <b class="w3-text-orange">francaisvitefait@gmail.com</b>  <br>
+<br>
+<div class="w3-center"> <form action="{% url "soumettre" %}">
+    			<input type="submit" class="w3-btn w3-border w3-border-orange w3-white w3-round-large w3-center" value="Soummettre un document" />
+		</form></div>
+
+<br>
+francaisvitefait@gmail.com
+Welcome to <b><i class="w3-text-red">FVF Translation and Proofreading services </i></b>!! It is to address the need for qualified Francophone and anglophone Proofreaders
+in Atlantic Canadians Universities that we have decided to create this Platform. We proofread both French and English. 
+Whether it is you are a student, or a worker who needs a document to be proofread, we will assist in less than 24h 
+(Please read the About Us sections for timeframes). If there is something that you were wondering if we do but was not 
+mentioned here, please email us at <b class="w3-text-orange">francaisvitefait@gmail.com</b> <br>
+ <br>
+<div class="w3-center"> <form action="{% url "soumettre" %}">
+    			<input type="submit" class="w3-btn w3-border w3-border-orange w3-white w3-round-large w3-center" value="Submit document" />
+		</form></div>
+
+</div>
+<div> <div class="w3-row">
+  <div class="w3-container w3-col m3 l3">
+
+  
+  </div>
+  <div class="w3-container w3-col m9 l9 w3-center">
+ 
+  
+  </div>
+</div></div>
+{% endblock%}
+
+{% block second%}
+
+
+
+
+<div class="w3-container w3-orange w3-col s12" >
+  <h2 style="text-align:center">What we do!/  Ce que nous faisons!</h2>
+</div>
+
+  
+<div class="w3-container center">
+<div class="w3-row w3-center ">
+
+<div class="w3-container w3-col m8 l4">
+{% block some%}
+<p>
+
+<img src="{% static 'francais/curriculum.svg' %}" class="w3-circle" alt="Norway" style="width:90%">
+<div class="w3-xlarge">Relecture gratuite de resume/CV jusqu'a 2 pages</div>
+</p>
+{% endblock%}
+
+</div>
+
+
+<div class="w3-container w3-col m8 l4">
+{%block mil%}
+<p>
+
+<img src="{% static 'francais/interface.png' %}" class="w3-circle" alt="Norway"  style="width:90%">
+<div class="w3-xlarge">Relecture de documents Professionnels et academiques</div>
+</p> 
+{% endblock%}
+</div>
+
+
+
+<div class="w3-container w3-col m8 l4">
+{%block par%}
+<p>
+
+<img src="{% static 'francais/translator.svg' %}" class="w3-circle" alt="Norway"  style="width:90%">
+<div class="w3-xlarge">Translation English-French/French English</div>
+</p> 
+{% endblock%}
+</div>
+
+</div>
+
+  
+  <br>
+   <br>
+  <br>
+   <br>
+    <br>
+<div class="w3-panel w3-leftbar w3-border-blue w3-pale-blue" style="text-align:center">
+  <p><h2>Want something else? Please email us!</h2></p>
+</div> 
+</div>
+
+{% endblock%}
+
+
+
+{%block cote%}
+  
+  <div class="w3-container w3-red">
+  <h2 style="text-align:center">Mot du jour</h2>
+  </div>
+  <h4> <b class="w3-xlarge">Mémériser</b> (French)</h4>
+  <p class="w3-large"> 1.verbe
+(familièrement) Devenir une mémère, transformer en mémère.</p>
+  <br>
+  
+ <!--  <div class="contenu_corps" style="margin: 20px 20px 0px 20px">
+<div class="w3-container">
+ 
+
+</div>
+
+  </div> 
+  <div class="w3-container w3-red">
+  <h2 style="text-align:center"> Daily word</h2>
+  </div>
+   <h4> <b class="w3-xlarge">Mémériser</b> (French)</h4>
+  <p class="w3-large"> 1.verbe
+(familièrement) Devenir une mémère, transformer en mémère.</p>
+  <br>
+  -->
+  
+
+{% endblock%}
+
+
+
+
+
+{%block cote2%}
+
+
+  <div class="w3-container w3-indigo">
+  <h2 style="text-align:center">Tutors</h2>
+  </div>
+ 
+  <br>
+  
+  <div class="contenu_corps" style="margin: 5px 5px 0px 5px">
+<div class="w3-container">
+<h3>Looking for a  <b> French tutor</b> ?</h3> 
+
+     <h3 class="w3-center"> OR</h3>
+
+  <h3>Looking for a French Tutor in </h3>
+  
+   <div class="w3-panel w3-yellow">
+    <h4>Math</h4>
+  </div>
+  <div class="w3-panel w3-red">
+    <h4>Math</h4>
+  </div>
+  
+  
+  <div class="w3-panel w3-blue">
+    <h4>Physics</h4>
+  </div>
+  
+  <div class="w3-panel w3-cyan">
+    <h4>Chemistry</h4>
+  </div>
+  <div class="w3-panel w3-green">
+    <h4>something else</h4>
+  </div>
+  <div class="w3-row">
+  <div class="w3-container w3-col m3 l3">
+  <p><i class="fa fa-spinner w3-spin" style="font-size:64px"></i></p>
+  
+  </div>
+  <div class="w3-container w3-col m9 l9 w3-center">
+  <p> <div class="w3-lime ">Text or call</div> <br>  289 200 0248 </p>
+  
+  </div>
+</div>
+
+  </div>
+ 
+</div>
+
+{% endblock%}
+{% block faq%}
+
+
+{% endblock %}
+
+
+{% block prix%}
+  <div class="w3-col w3-container w3-center" style="width:100%">
+   <div class="w3-row">
+   <div class="w3-half" >
+    <div class="w3-panel w3-card-4 w3-light-grey" style="margin: 2px 2px 2px 2px">
+    <p class=" w3-large w3-serif" >
+    <i class="fa fa-quote-right w3-xxlarge w3-text-red"></i><br>
+     Amazing job FVF! I got an A in my Honours Essay. Thanks FVF </p>
+    <br>
+    <i>Sarah, Memorial University of Newfoundland French Student</i></p>
+    
+  </div>
+  </div>
+  <div class="w3-half" >
+  <div class="w3-panel w3-card-4 w3-light-grey" style="margin: 2px 2px 2px 2px" >
+    <p class=" w3-large w3-serif">
+    <i class="fa fa-quote-right w3-xxlarge w3-text-red"></i><br>
+    Jerome Proofread the French version of our Employment contract  and is was perfect.</p>
+    <br>
+    <i> Michelle, HR Manager</i></p>
+  </div>
+  </div>
+ </div>
+  
+  </div>
+{% endblock %}

@@ -1,0 +1,314 @@
+{% load static %}
+<!DOCTYPE html>
+<html >
+<head>
+<title> {% block title%} {% endblock %} </title>
+<link rel="icon" href="{% static 'francais/logo1.jpg' %}" type="jpg" sizes="16x16">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" /> 
+<meta name="description" value=" Get your document proofread for cheap.French or Francais and English Translation and proofreading services, Traduction et relecture gratuite, free resume proofreading">
+<meta name=”robots” content=”noindex, nofollow” />
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+   
+}); 
+
+</script>
+<style>
+.w3-tangerine {
+    font-family: "Tangerine", cursive, sans-serif;
+    margin: 0px 0 0 0;
+    text-align: center;
+}
+
+.center {
+    width: 90%;
+    margin: auto
+    
+}
+
+.texting  {
+    background-image:url('{% static 'francais/background3.jpg' %}');
+	background-repeat:no-repeat;
+
+	width : 100%;
+    
+	
+  
+}
+</style>
+
+</head>
+<body>
+<div class="w3-row w3-margin-0" >
+  <div class="w3-col w3-container s12 m4 l3 w3-margin-0" >
+  <p class=" class="w3-navbar w3-border w3-margin-0"> <img src="{% static 'francais/logo1.jpg' %}" alt="logo" style="margin:0px 0 0 0" width="100%">  </p>
+  </div>
+  	<div class="w3-col w3-container  s12 m8 l9 w3-tangerine w3-hide-small texting" style="margin:0px 0 0 0" >
+
+     <div class="w3-col w3-container w3-orange m8 w3-tangerine"  style="font-size:50px; margin-left:400px">
+   			<p>Un travail de pro Ã  votre bourse </p>
+  	</div>
+     <div class="w3-col w3-container w3-red m8 w3-tangerine "  style="font-size:50px; margin:0px 0 0 0; max-heigth: 50px;">
+   			<p>High quality proofreading for very cheap </p>
+  	</div>
+  </div>
+  
+</div>
+<div class="w3-container-fluid w3-mobile">
+
+  <ul class="w3-navbar w3-orange w3-border w3-bar">
+    <li class="w3-col  w3-hide-small" style="width:50px; margin-left:20px" > <i class="w3-xxlarge fa fa-envelope-o"></i></li>
+    <li class="w3-right w3-hide-small" style="font-size:20px"><a href="{% url "about" %}">A Propos de nous/ About Us</a></li>
+    <li class="w3-right w3-hide-small" style="font-size:20px"><a href="{% url "soumettre" %}">Submit a/Soumettre un document</a></li>
+   <!-- <li class="w3-right w3-hide-small" style="font-size:20px"><a href="{% url "JDA" %}"> Le journal de l'apprenti</a></li>-->
+     <li class="w3-right" style="font-size:20px"><a href="{% url "home" %}">Home</a></li>
+	<li> <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a></li>
+  </ul>
+</div>
+<div id="demo" class="w3-bar-block w3-red w3-hide w3-hide-large w3-hide-medium">
+   <li class="w3-bar-item w3-button" style="font-size:20px"><a href="{% url "about" %}">A Propos de nous/About Us</a></li>
+   <li class="w3-bar-item w3-button" style="font-size:20px"><a href="{% url "soumettre" %}">Submit a/Soumettre un document</a></li>
+ <!--<li class="w3-bar-item w3-button" style="font-size:20px"><a href="{% url "JDA" %}"> Le journal de l'apprenti</a></li> -->
+</div>
+<script>
+function myFunction() {
+    var x = document.getElementById("demo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+<div class="w3-container-fluid">
+{%block topimage%}
+ <div class="w3-display-container w3-hover-opacity" style="width:100%">
+<img src="{% static 'francais/image_top.jpg' %}" alt="image top"  width="100%" height="500px">
+ <div class="w3-display-middle w3-display-hover  w3-text-white">
+      <h1><p>We proofread both in French and English</p> </h1>
+       <div class="w3-center"> <form action="{% url "soumettre" %}">
+    			<input type="submit" class="w3-btn w3-border w3-border-orange  w3-round-large w3-center w3-orange w3-xlarge" value="Submit a/Envoyer un document" />
+		</form></div>
+    </div>
+</div>
+
+{% endblock %}
+</div>
+
+<div class="w3-container w3-purple">
+  <h6></h6>
+</div>
+
+<p>
+
+</p>
+
+<div class="w3-row center">
+
+<div class="w3-container w3-col m8 l9">
+{% block content%}
+
+{% endblock%}
+
+</div>
+
+
+<div class="w3-container w3-col m8 l3">
+{%block cote%}
+<p>
+
+<p> 
+{% endblock%}
+</div>
+
+</div>
+<br>
+<br>
+<br>
+<br>
+<div class="w3-row center">
+
+<div class="w3-container w3-col m8 l9">
+{% block second%}
+
+
+{% endblock%}
+</div>
+
+
+<div class="w3-container w3-col m8 l3">
+{%block cote2%}
+<p>
+
+<p> 
+{% endblock%}
+</div>
+
+</div>
+<br>
+<br>
+<br>
+<br>
+{% block do%}
+<div class="w3-container center">
+<div class="w3-container w3-orange" style ="width:100%">
+  <h2 style="text-align:center">Nos Prix!/ Our prices</h2>
+</div>
+
+</div>
+<div class="w3-container center">
+<div class="w3-row w3-center w3-col m12 12">
+
+<div class="w3-container w3-col m8 l4">
+
+<p>
+<div class="w3-card-12 w3-margin">
+  <div class="w3-display-container ">
+    <img src="{% static 'francais/reading.png' %}" alt="Lights" style="width:100%">
+    <div class="w3-xlarge w3-display-bottomleft w3-padding"></div>
+    <ul class="w3-ul w3-border w3-center w3-hover-shadow">
+        <li class="w3-black w3-xlarge w3-padding-32">Student</li>
+        <li class="w3-padding-16"><b>Assistance</b> via Email</li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide">$0.02 par mot</h2>
+          
+        </li>
+        
+         <li class="w3-padding-16">
+          <h2 class="w3-wide">Rewriting: to be discussed</h2>
+          
+        </li>
+        <li class="w3-red w3-padding-24">
+          
+        </li>
+      </ul>
+   
+  </div>
+ 
+</div>
+</p>
+
+
+</div>
+
+
+<div class="w3-container w3-col m8 l4">
+
+<p>
+<div class="w3-card-12 w3-margin">
+  <div class="w3-display-container ">
+    <img src="{% static 'francais/signature.png' %}" alt="Lights" style="width:100%">
+    <div class="w3-xlarge w3-display-bottomleft w3-padding"></div>
+     <ul class="w3-ul w3-border w3-center w3-hover-shadow">
+        <li class="w3-black w3-xlarge w3-padding-32">Professional</li>
+        <li class="w3-padding-16"><b>Assistance</b> via Email</li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide">$0.03 par mot</h2>
+          
+        </li>
+         <li class="w3-padding-16">
+          <h2 class="w3-wide">Rewriting: to be discussed</h2>
+          
+        </li>
+        <li class="w3-red w3-padding-24">
+          
+        </li>
+      </ul>
+ 
+</div>
+</p> 
+</div>
+</div>
+
+
+<div class="w3-container w3-col m8 l4">
+
+<p>
+<div class="w3-card-12 w3-margin">
+  <div class="w3-display-container ">
+    <img src="{% static 'francais/translation.svg' %}" alt="Lights" style="width:100%">
+    <div class="w3-xlarge w3-display-bottomleft w3-padding"></div>
+     <ul class="w3-ul w3-border w3-center w3-hover-shadow">
+        <li class="w3-black w3-xlarge w3-padding-32">Translation</li>
+        <li class="w3-padding-16"><b>Assistance</b> via Email</li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide">$ to be determined</h2>
+          
+        </li>
+         <li class="w3-padding-16">
+          <h2 class="w3-wide">Per document evaluation</h2>
+          
+        </li>
+        <li class="w3-red w3-padding-24">
+          
+        </li>
+      </ul>
+ 
+</div>
+</p> 
+</div>
+</div>
+
+{% endblock%}
+
+
+
+
+
+
+
+</div>
+
+{% block faq%}
+
+
+{% endblock %}
+
+
+<br>
+<br>
+<br>
+
+<div class="w3-row">
+  <div class="w3-col w3-container" style="width:10%"><p> </p></div> 
+  
+{% block prix%}
+  
+  
+{% endblock %}
+ <div class="w3-col  w3-container" style="width:10%"><p></p></div> 
+</div>
+</div>
+
+
+  <footer class="w3-row  w3-orange w3-center">
+        
+                <div class="w3-container w3-third w3-mobile">
+                   
+                <h4>Email: francaisvitefait@gmail.com   </h4>
+              
+              </div>
+              
+               <div class="w3-container w3-third w3-mobile">
+                   
+                <h4> Like Us On social media  </h4>
+              
+              </div>
+               <div class="w3-container w3-third w3-mobile">
+                   
+                <h4>Text: 289 200 0248</h4>
+              
+              </div>
+    </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% block title%}Soummettre {% endblock %} 
+{% block content%}
+
+  <div class="w3-container w3-orange">
+  <h2>Document Submission Form</h2>
+ </div>
+ 
+  <div class="w3-panel w3-leftbar w3-border-red w3-pale-red"" style="text-align:center">
+  <p>If your resume is less than 2 pages, please email it to us and we will read it for free!</p>
+</div> 
+ <div class="w3-panel w3-leftbar w3-border-red w3-pale-green"" style="text-align:center">
+  <p>Only word documents with extension ".docx" can be uploaded for now</p>
+</div> 
+  <div class="w3-panel w3-leftbar w3-border-red w3-pale-green"" style="text-align:center">
+  			<p> Seuls les documents word avec l'extension ".docx" peuvent être téléversé/ téléchargés.</p>
+		</div> 
+     
+
+ <form name = "form" enctype = "multipart/form-data" class="w3-container" action = "{% url "saved" %}" method = "POST" id="uploadingForm">
+   {% csrf_token %}
+         
+  <p>
+  <input class="w3-input" type="text" name="firstName" pattern="[A-Za-z]{+}" required>
+  <label>First Name</label></p>
+
+  <p>
+  <input class="w3-input" type="text" name="lastName" pattern="[A-Za-z]{+}" required>
+  <label>Last Name</label></p>
+
+  <p>
+  <input class="w3-input" type="text" name="email" required>
+  <label>Email</label></p>
+  <p>
+
+  <p>  </p>
+  
+  <br>
+  <br>
+<div class ="w3-row">
+  
+  <div class="w3-container  w3-half">
+
+  <input type="radio" name="Stud_status"  checked> Academic<br>
+  
+   </div>
+   
+    <div class="w3-container  w3-half">
+
+  <input type="radio" name="Stud_status" > Professional<br>
+  
+
+   </div>
+   
+   </div>  
+<br>
+<br>
+<div class="w3-row">
+
+  <div class="w3-container ">
+  
+   <input type="file" name="uploadDoc" id="uploadDoc" required>
+   <label class="w3-label">load File here</label>
+   
+   </div>
+   
+   
+   <br>
+   <br>
+   
+
+   
+   
+   <div class="w3-container ">
+   
+   <textarea class="w3-input" name="comment" pattern="[A-Za-z]{+}" required></textarea>
+            <label class="w3-label">Comments</label>
+   
+   </div>
+
+ </p>
+ 
+
+ 
+ <p style="text-align:center">
+  <button class="w3-btn w3-orange" >Submit</button></p>
+
+</form>
+
+{% endblock%}
+
+{% block second%}
+
+
+{% endblock%}
+
+
+
+{% block do%}
+
+
+
+{% endblock%}
